@@ -16,15 +16,17 @@
                 double etanol = Convert.ToDouble(txt_etanol.Text);
                 double gasolina = Convert.ToDouble(txt_gasolina.Text);
 
+                string marca = txt_marca.Text;
+                string modelo = txt_modelo.Text;
                 string msg = "";
 
                 if (etanol <= (gasolina * 0.7))
                 {
-                    msg = "Etanol é a melhor opção";
+                    msg = "Etanol é a melhor opção para o seu " + marca + " " + modelo;
                 }
                 else
                 {
-                    msg = "Gasolina é a melhor opção";
+                    msg = "Gasolina é a melhor opção para o seu " + marca + " " + modelo;
                 }
 
                 DisplayAlert("Calculado", msg, "Ok");
